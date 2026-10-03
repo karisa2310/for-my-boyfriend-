@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Davit ♡</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  min-height:100vh;
+  overflow-x:hidden;
+  font-family:Georgia,serif;
+  color:#416d7b;
+
+  background:
+    radial-gradient(circle at 20% 15%, #ffffffaa 0 2px, transparent 3px),
+    radial-gradient(circle at 80% 30%, #ffffff99 0 3px, transparent 4px),
+    radial-gradient(circle at 35% 75%, #ffffff77 0 2px, transparent 3px),
+    linear-gradient(
+      160deg,
+      #e5f7ff 0%,
+      #c9eafa 35%,
+      #b7dfee 65%,
+      #dff4fb 100%
+    );
+
+  background-size:
+    160px 160px,
+    220px 220px,
+    190px 190px,
+    100% 100%;
+}
+
+/* ======================
+   BUBBLES
+====================== */
+
+.bubble{
+  position:fixed;
+  bottom:-60px;
+  border:1px solid #ffffffaa;
+  background:#ffffff35;
+  border-radius:50%;
+  pointer-events:none;
+  animation:rise linear infinite;
+  z-index:0;
+}
+
+.b1{
+  width:22px;
+  height:22px;
+  left:8%;
+  animation-duration:9s;
+}
+
+.b2{
+  width:12px;
+  height:12px;
+  left:24%;
+  animation-duration:7s;
+  animation-delay:2s;
+}
+
+.b3{
+  width:30px;
+  height:30px;
+  left:47%;
+  animation-duration:11s;
+  animation-delay:1s;
+}
+
+.b4{
+  width:16px;
+  height:16px;
+  left:70%;
+  animation-duration:8s;
+  animation-delay:3s;
+}
+
+.b5{
+  width:26px;
+  height:26px;
+  left:88%;
+  animation-duration:10s;
+  animation-delay:1s;
+}
+
+@keyframes rise{
+  0%{
+    transform:translateY(0);
+    opacity:0;
+  }
+
+  15%{
+    opacity:.7;
+  }
+
+  100%{
+    transform:translateY(-115vh);
+    opacity:0;
+  }
+}
+
+/* ======================
+   SPARKLES
+====================== */
+
+.sparkle{
+  position:fixed;
+  color:#fff;
+  font-size:20px;
+  z-index:1;
+  animation:twinkle 3s ease-in-out infinite;
+  pointer-events:none;
+}
+
+.s1{
+  top:12%;
+  left:12%;
+}
+
+.s2{
+  top:28%;
+  right:13%;
+  animation-delay:1s;
+}
+
+.s3{
+  bottom:22%;
+  left:17%;
+  animation-delay:2s;
+}
+
+.s4{
+  bottom:12%;
+  right:17%;
+  animation-delay:.5s;
+}
+
+@keyframes twinkle{
+  0%,100%{
+    opacity:.25;
+    transform:scale(.8);
+  }
+
+  50%{
+    opacity:1;
+    transform:scale(1.25);
+  }
+}
+
+/* ======================
+   MUSIC BUTTON
+====================== */
+
+.music{
+  position:fixed;
+  top:18px;
+  right:18px;
+  z-index:50;
+
+  padding:11px 17px;
+
+  border:1px solid #ffffffcc;
+  border-radius:30px;
+
+  background:#ffffff70;
+  color:#416d7b;
+
+  font-family:Georgia,serif;
+  backdrop-filter:blur(10px);
+
+  box-shadow:0 6px 20px #517f9120;
+}
+
+/* ======================
+   PAGE
+====================== */
+
+.page{
+  min-height:100vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:75px 22px;
+
+  position:relative;
+  z-index:2;
+}
+
+/* ======================
+   GLASS CARD
+====================== */
+
+.card{
+  width:100%;
+  max-width:600px;
+
+  padding:42px 28px;
+
+  text-align:center;
+
+  border:1px solid #ffffffaa;
+  border-radius:35px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff70,
+      #ffffff32
+    );
+
+  backdrop-filter:blur(14px);
+
+  box-shadow:
+    0 20px 50px #4d819520,
+    inset 0 1px 0 #ffffffcc;
+
+  animation:appear 1.3s ease;
+}
+
+@keyframes appear{
+  from{
+    opacity:0;
+    transform:translateY(35px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* ======================
+   TEXT
+====================== */
+
+.label{
+  font-family:Arial,sans-serif;
+  font-size:9px;
+  letter-spacing:4px;
+  color:#769aa6;
+  margin-bottom:28px;
+}
+
+h1{
+  font-size:clamp(36px,10vw,58px);
+  line-height:1.25;
+  font-weight:normal;
+  font-style:italic;
+  color:#3f6d7c;
+}
+
+h2{
+  font-size:32px;
+  line-height:1.4;
+  font-weight:normal;
+  font-style:italic;
+  color:#416f7e;
+  margin-bottom:25px;
+}
+
+p{
+  font-size:16px;
+  line-height:2;
+  margin-bottom:20px;
+}
+
+.english{
+  color:#347587;
+  font-style:italic;
+}
+
+.small{
+  font-size:13px;
+  color:#7897a2;
+}
+
+.line{
+  width:65px;
+  height:1px;
+  background:#83b3c2;
+  margin:30px auto;
+}
+
+.heart{
+  font-size:25px;
+  color:#79aebe;
+  margin-top:15px;
+}
+
+.wave{
+  margin:25px 0;
+  font-size:25px;
+  letter-spacing:9px;
+  color:#73aebe;
+  animation:wave 3s ease-in-out infinite;
+}
+
+@keyframes wave{
+  0%,100%{
+    transform:translateX(0);
+  }
+
+  50%{
+    transform:translateX(8px);
+  }
+}
+
+/* ======================
+   DECORATIVE CIRCLES
+====================== */
+
+.circle{
+  position:absolute;
+  border-radius:50%;
+  border:1px solid #ffffff70;
+  background:#ffffff20;
+  z-index:-1;
+}
+
+.c1{
+  width:150px;
+  height:150px;
+  top:8%;
+  right:-70px;
+}
+
+.c2{
+  width:100px;
+  height:100px;
+  bottom:8%;
+  left:-50px;
+}
+
+/* ======================
+   MOBILE
+====================== */
+
+@media(max-width:500px){
+
+  .card{
+    padding:38px 22px;
+    border-radius:30px;
+  }
+
+  h2{
+    font-size:29px;
+  }
+
+  p{
+    font-size:15px;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- BUBBLES -->
+
+<div class="bubble b1"></div>
+<div class="bubble b2"></div>
+<div class="bubble b3"></div>
+<div class="bubble b4"></div>
+<div class="bubble b5"></div>
+
+<!-- SPARKLES -->
+
+<div class="sparkle s1">✦</div>
+<div class="sparkle s2">✧</div>
+<div class="sparkle s3">✦</div>
+<div class="sparkle s4">♡</div>
+
+
+<!-- MUSIC -->
+
+<button class="music" id="musicBtn" onclick="toggleMusic()">
+♫ play this
+</button>
+
+<audio id="music" loop>
+  <source src="lagu.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- ======================
+     OPENING
+====================== -->
+
+<section class="page">
+
+  <div class="circle c1"></div>
+
+  <div class="card">
+
+    <div class="label">
+      A LITTLE SOMETHING FOR YOU
+    </div>
+
+    <h1>
+      for my boyfriend,<br>
+      Davit.
+    </h1>
+
+    <div class="wave">
+      ~ ~ ~
+    </div>
+
+    <p>
+      hey you.
+    </p>
+
+    <p>
+      aku bikin sesuatu kecil
+      buat kamu.
+    </p>
+
+    <p class="english">
+      just because you deserve
+      to hear this.
+    </p>
+
+    <div class="line"></div>
+
+    <p class="small">
+      take your time and scroll slowly ♡
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- ======================
+     PART 01
+====================== -->
+
+<section class="page">
+
+  <div class="card">
+
+    <div class="label">
+      01 — ABOUT YOU
+    </div>
+
+    <h2>
+      you've come so far.
+    </h2>
+
+    <p>
+      aku tahu perjalanan kamu
+      sampai di titik ini nggak selalu
+      gampang.
+    </p>
+
+    <p>
+      ada hari dimana kamu capek,
+      ada hal yang bikin kamu
+      kepikiran.
+    </p>
+
+    <p>
+      tapi kamu tetap jalan.
+      tetap mencoba.
+      tetap bertahan.
+    </p>
+
+    <div class="wave">
+      ~ ~ ~
+    </div>
+
+    <p class="english">
+      and honestly,
+      i'm so proud of you.
+    </p>
+
+    <div class="heart">
+      ♡
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================
+     PART 02
+====================== -->
+
+<section class="page">
+
+  <div class="card">
+
+    <div class="label">
+      02 — I SEE YOU
+    </div>
+
+    <h2>
+      please remember this.
+    </h2>
+
+    <p>
+      mungkin aku nggak selalu tahu
+      semua hal yang kamu lewati.
+    </p>
+
+    <p>
+      tapi aku lihat usaha kamu.
+    </p>
+
+    <p>
+      sekecil apa pun langkahnya,
+      kamu tetap berusaha sampai
+      sejauh ini.
+    </p>
+
+    <p class="english">
+      you are doing better
+      than you think.
+    </p>
+
+    <div class="line"></div>
+
+    <p>
+      jadi jangan lupa buat
+      bangga sama diri kamu juga.
+    </p>
+
+    <div class="heart">
+      ♡
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================
+     PART 03
+====================== -->
+
+<section class="page">
+
+  <div class="card">
+
+    <div class="label">
+      03 — FROM AFAR
+    </div>
+
+    <h2>
+      even from miles away.
+    </h2>
+
+    <p>
+      kita memang lagi jauh.
+    </p>
+
+    <p>
+      aku nggak bisa selalu ada
+      di samping kamu setiap kali
+      kamu capek.
+    </p>
+
+    <p>
+      tapi walaupun dari jauh,
+      aku tetap dukung kamu.
+    </p>
+
+    <div class="wave">
+      ~ ~ ~
+    </div>
+
+    <p class="english">
+      always rooting for you,
+      from wherever i am.
+    </p>
+
+    <div class="heart">
+      ♡
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================
+     PART 04
+====================== -->
+
+<section class="page">
+
+  <div class="circle c2"></div>
+
+  <div class="card">
+
+    <div class="label">
+      04 — FOR DAVIT
+    </div>
+
+    <h2>
+      one more thing.
+    </h2>
+
+    <p>
+      jangan terlalu keras
+      sama diri sendiri ya.
+    </p>
+
+    <p>
+      kamu nggak harus punya
+      semuanya sekarang.
+    </p>
+
+    <p>
+      pelan-pelan aja.
+      satu langkah demi satu langkah.
+    </p>
+
+    <p>
+      karena menurut aku,
+      kamu sudah melakukan sesuatu
+      yang hebat hanya dengan
+      terus mencoba.
+    </p>
+
+    <p class="english">
+      i'll always be proud of you.
+    </p>
+
+    <div class="heart">
+      ♡
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================
+     ENDING
+====================== -->
+
+<section class="page">
+
+  <div class="card">
+
+    <div class="label">
+      FOR MY BOY
+    </div>
+
+    <h1>
+      Davit,
+    </h1>
+
+    <div class="line"></div>
+
+    <p>
+      thank you for trying.
+    </p>
+
+    <p>
+      thank you for staying.
+    </p>
+
+    <p>
+      and thank you for becoming
+      the person you are today.
+    </p>
+
+    <div class="wave">
+      ~ ~ ~
+    </div>
+
+    <p class="english">
+      i'm really, really proud of you.
+    </p>
+
+    <p>
+      keep going, love.
+    </p>
+
+    <div class="heart">
+      ♡
+    </div>
+
+  </div>
+
+</section>
+
+
+<script>
+
+const music =
+document.getElementById("music");
+
+const button =
+document.getElementById("musicBtn");
+
+function toggleMusic(){
+
+  if(music.paused){
+
+    music.play();
+
+    button.innerHTML="Ⅱ pause";
+
+  }else{
+
+    music.pause();
+
+    button.innerHTML="♫ play this";
+
+  }
+
+}
+
+</script>
+
+</body>
+</html>
